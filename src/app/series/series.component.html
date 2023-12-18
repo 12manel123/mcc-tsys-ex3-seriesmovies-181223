@@ -2,17 +2,17 @@
     <h2>All series</h2>
     <div class="row">
         @for (serie of series; track $index) {
-        <div class="col-md-2" >
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ serie.id }}</h5>
-                    <h5 class="card-title">{{ serie.adult }}</h5>
-                    <h5 class="card-title">{{ serie.original_name }}</h5>
-                    <h5 class="card-title">{{ serie.overview }}</h5>
-                    <!--<img class="img-responsive" src="{{movie.poster_path}}">--><!--TODO NO SE DONDE OBTENER LOS DATOS DE LA IAMGNE-->
-                    <button (click)="showSerie(serie)" class="btn btn-warning card-button">+ Info</button>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Id: {{ serie.id }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Adult: {{ serie.adult }}</h6>
+                        <h5 class="card-title">{{ serie.original_name }}</h5>
+                        <p class="card-text">{{ serie.overview }}</p>
+                        <button (click)="showSerie(serie)" class="btn btn-warning card-button">+ Info</button>
+                    </div>
                 </div>
             </div>
-        </div>}
+        }
     </div>
 </div>
