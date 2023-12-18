@@ -1,27 +1,63 @@
-# MccTsysTa40051223
+# Ex03
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+## Descripción
+Este proyecto es una aplicación web desarrollada en Angular que permite explorar información sobre películas y series. Utiliza la API de The Movie Database (TMDb) para obtener datos actualizados sobre películas y series en cartelera y populares.
 
-## Development server
+## Características Principales
+    Lista de películas en cartelera.
+    Detalles de películas individualmente.
+    Lista de series populares.
+    Detalles de series individualmente.
+    Página de error para rutas no encontradas.
+    
+## Despliegue
+La aplicación está desplegada y accesible en la siguiente URL: https://main.dwxqdz0obwkqx.amplifyapp.com/movies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Características Principales
+- Lista las características más importantes de tu aplicación.
 
-## Code scaffolding
+## Requisitos Previos
+- Node.js y npm instalados en tu máquina.
+- Angular CLI instalado (`npm install -g @angular/cli`).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
+1. Clona este repositorio.
+   ```bash
+   git clone <URL_del_repositorio>
+   cd <nombre_del_directorio>
+   ```
 
-## Build
+2. Instala las dependencias.
+   ```bash
+   npm install
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Configuración
+Asegúrate de tener las claves de API necesarias para acceder a los servicios de la API de The Movie Database (TMDb).
 
-## Running unit tests
+1. Obtiene una clave de API en [TMDb Developer](https://www.themoviedb.org/settings/api).
+2. Reemplaza `TU_CLAVE_API` en los archivos `movie.service.ts` y `serie.service.ts` con tu clave de API.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Uso
+1. Inicia la aplicación.
+   ```bash
+   ng serve
+   ```
 
-## Running end-to-end tests
+2. Abre tu navegador y ve a `http://localhost:4200/`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Componentes Principales
+- `MoviesComponent`: Muestra la lista de películas.
+- `MovieComponent`: Muestra detalles de una película específica.
+- `SeriesComponent`: Muestra la lista de series.
+- `SerieComponent`: Muestra detalles de una serie específica.
 
-## Further help
+## Servicios
+- `MovieService`: Gestiona las solicitudes relacionadas con películas.
+- `SerieService`: Gestiona las solicitudes relacionadas con series.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Rutas
+- `/movies`: Muestra la lista de películas.
+- `/movie/:id`: Muestra detalles de una película específica.
+- `/series`: Muestra la lista de series.
+- `/serie/:id`: Muestra detalles de una serie específica.
