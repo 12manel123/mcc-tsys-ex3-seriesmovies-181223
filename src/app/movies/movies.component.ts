@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MovieService } from '../services/movie.service';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-movies',
   standalone: true,
-  imports: [],
+  imports: [JsonPipe],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css'
 })

@@ -7,6 +7,17 @@
                     <h5 class="card-title">{{ serie.adult }}</h5>
                     <h5 class="card-title">{{ serie.original_name }}</h5>
                     <h5 class="card-title">{{ serie.overview }}</h5>
+                    <ul class="list-group">
+                        @for (gener of serie.genres; track $index) {
+                            <li class="list-group-item">{{gener.name}}</li>
+                        }
+                    </ul>
+                    <h6 class="card-subtitle mb-2 mt-4 text-muted">Production Companies</h6>
+                    <ul class="list-group">
+                        @for (companies of serie.production_companies; track $index) {
+                            <li class="list-group-item">{{companies.name}}</li>
+                        }
+                    </ul>
                 </div>
             </div>
         </div>

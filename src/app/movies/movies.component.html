@@ -8,7 +8,8 @@
                     <h5 class="card-title">Id: {{ movie.id }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Adult: {{ movie.adult }}</h6>
                     <h5 class="card-title">{{ movie.original_title }}</h5>
-                    <p class="card-text">{{ movie.overview }}</p>
+                    <p class="card-text">
+                        {{ movie.overview }}</p>
                     <button (click)="showCharacter(movie)" class="btn btn-warning card-button">+ Info</button>
                 </div>
             </div>

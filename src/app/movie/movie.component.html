@@ -7,6 +7,18 @@
                     <h5 class="card-title">{{ movie.adult }}</h5>
                     <h5 class="card-title">{{ movie.original_title }}</h5>
                     <h5 class="card-title">{{ movie.overview }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Genres</h6>
+                    <ul class="list-group">
+                        @for (gener of movie.genres; track $index) {
+                            <li class="list-group-item">{{gener.name}}</li>
+                        }
+                    </ul>
+                    <h6 class="card-subtitle mb-2 mt-4 text-muted">Production Companies</h6>
+                    <ul class="list-group">
+                        @for (companies of movie.production_companies; track $index) {
+                            <li class="list-group-item">{{companies.name}}</li>
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
